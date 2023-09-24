@@ -34,16 +34,17 @@ class DogVisionConverter{
       this.ctx = this.canvasTag.getContext("2d");
 
       this.ctx.filter = "brightness(50%) blur(6px)";
-      //this.ctx.drawImage(this.img, 0, 0);
       this.invert();
     };
   };
 
   drawNormal = () => {
+    this.ctx.filter = "none";
     this.ctx.drawImage(this.img, 0, 0);
   };
 
   invert = () => {
+    this.ctx.filter = "brightness(50%) blur(6px)";
     this.ctx.drawImage(this.img, 0, 0);
     const imageData = this.ctx.getImageData(
       0,
@@ -61,7 +62,6 @@ class DogVisionConverter{
       data[i] = (green + red) / 2; //r
       data[i + 1] = (green + red) / 2; //g
     }
-    //ctx.filter = "brightness(50%)";
     this.ctx.putImageData(imageData, 0, 0);
   };
 }
