@@ -1,6 +1,6 @@
-# DogVisionConverter
+# Dog Vision Converter
 
-An app that allows you to change your photo the way dogs would probably see it
+An app that allows you to change your photo the way dogs would probably see it!
 
 Enjoy!
 
